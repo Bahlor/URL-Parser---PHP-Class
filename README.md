@@ -1,7 +1,9 @@
 URL-Parser---PHP-Class
 ======================
 
-A php class for parsing urls very simply.
+A php class for parsing urls very simply. Feel free to contribute. :)
+
+Freely distributable under the MIT License.
 
 ## Basic example
 ================
