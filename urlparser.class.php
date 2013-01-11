@@ -57,9 +57,7 @@ class parseURL {
 	 */
 	private function parseURL() {
 		$data	=	parse_url($this->url);
-		
-		print_r($data);
-		
+				
 		$this->protocol	=	$data['scheme'];
 		$this->host		=	$data['host'];
 		
@@ -142,7 +140,7 @@ class parseURL {
 	 * @return void
 	 */
 	public function get_url(){
-    	return $url;
+    	return $this->url;
 	}
 	
 	/**
@@ -152,7 +150,7 @@ class parseURL {
 	 * @return void
 	 */
 	public function get_protocol(){
-	    return $protocol;
+	    return $this->protocol;
 	}
 	
 	/**
@@ -162,7 +160,7 @@ class parseURL {
 	 * @return void
 	 */
 	public function get_host(){
-	    return $host;
+	    return $this->host;
 	}
 	
 	/**
@@ -172,7 +170,7 @@ class parseURL {
 	 * @return void
 	 */
 	public function get_path(){
-	    return $path;
+	    return $this->path;
 	}
 	
 }
