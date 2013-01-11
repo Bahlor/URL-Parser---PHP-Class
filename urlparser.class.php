@@ -28,7 +28,7 @@ class parseURL {
 	 * 
 	 * @access public
 	 * @param mixed $url
-	 * @return void
+	 * @return int
 	 */
 	public function __construct($url) {
 		if(!isset($url)	||	empty($url)	||	trim($url) == ''	||	!is_string($url)	||	!$this->check($url)) {	return false; }
@@ -41,7 +41,7 @@ class parseURL {
 	 * 
 	 * @access private
 	 * @param mixed $url
-	 * @return void
+	 * @return int
 	 */
 	private function check($url) {
 		if(function_exists('filter_var')) {
@@ -55,7 +55,7 @@ class parseURL {
 	 * parseURL function.
 	 * 
 	 * @access private
-	 * @return void
+	 * @return int
 	 */
 	private function parseURL() {
 		$data	=	parse_url($this->url);
@@ -75,7 +75,7 @@ class parseURL {
 	 * 
 	 * @access private
 	 * @param mixed $path
-	 * @return void
+	 * @return int
 	 */
 	private function parsePath($path) {
 		$_path	=	array();
@@ -95,7 +95,7 @@ class parseURL {
 	 * 
 	 * @access private
 	 * @param mixed $query
-	 * @return void
+	 * @return int
 	 */
 	private function parseQuery($query) {
 		$_query			=	array();
@@ -118,7 +118,7 @@ class parseURL {
 	 * 
 	 * @access public
 	 * @param mixed $type
-	 * @return void
+	 * @return int
 	 */
 	public function get($type) {
 		switch(strtolower($type)) {
@@ -139,7 +139,7 @@ class parseURL {
 	 * get_url function.
 	 * 
 	 * @access public
-	 * @return void
+	 * @return int
 	 */
 	public function get_url(){
     	return $this->url;
@@ -149,7 +149,7 @@ class parseURL {
 	 * get_protocol function.
 	 * 
 	 * @access public
-	 * @return void
+	 * @return int
 	 */
 	public function get_protocol(){
 	    return $this->protocol;
@@ -159,7 +159,7 @@ class parseURL {
 	 * get_host function.
 	 * 
 	 * @access public
-	 * @return void
+	 * @return int
 	 */
 	public function get_host(){
 	    return $this->host;
@@ -169,7 +169,7 @@ class parseURL {
 	 * get_path function.
 	 * 
 	 * @access public
-	 * @return void
+	 * @return int
 	 */
 	public function get_path(){
 	    return $this->path;
