@@ -8,6 +8,8 @@
  * @version 	0.2
  * @author 		Christian Weber <christian@cw-internetdienste.de>
  * @link		http://www.cw-internetdienste.de
+ * 
+ *  freely distributable under the MIT Licence
  *
  */
  
