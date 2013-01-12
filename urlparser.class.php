@@ -17,11 +17,11 @@ class parseURL {
 	private		$regex	=	'\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))';
 	
 	protected 	$url;
-	
-	public 		$protocol;
-	public 		$host;
-	public 		$path;
-	public		$query;
+	//we use get method to get the values of properties
+	private 	$protocol;
+	private 	$host;
+	private 	$path;
+	private		$query;
 	
 	/**
 	 * __construct function.
