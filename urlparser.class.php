@@ -14,7 +14,7 @@
  */
  
 class parseURL {
-	private		$regex	=	'\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))';
+	private		$regex	=	'@\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))@';
 	
 	protected 	$url;
 	//we use get method to get the values of properties
@@ -47,7 +47,7 @@ class parseURL {
 		if(function_exists('filter_var')) {
 			return filter_var($url, FILTER_VALIDATE_URL);
 		} else {
-			return 	preg_match('@\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))@',$url);
+			return 	preg_match($this->regex,$url);
 		}
 	}
 	
