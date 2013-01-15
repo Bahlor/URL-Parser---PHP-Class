@@ -130,6 +130,8 @@ class parseURL {
 								break;
 			case 'path':		return $this->get_path();
 								break;
+			case 'query':		return $this->get_query();
+								break;
 			default:			return false;
 								break;
 		}
@@ -173,6 +175,16 @@ class parseURL {
 	 */
 	public function get_path(){
 	    return $this->path;
+	}
+	
+	/**
+	 * get_query function.
+	 * 
+	 * @access public
+	 * @return int
+	 */
+	public function get_query(){
+	    return $this->query;
 	}
 	
 }
